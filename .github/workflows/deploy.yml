@@ -19,3 +19,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+
+      - name: Configure git and Store git Credentials
+        run: |
+          git config --global user.name $GIT_USERNAME
+          git config --global user.email $GIT_EMAIL
+          git config --global credential.helper store
+          echo "https://${GIT_USERNAME}:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
