@@ -26,3 +26,7 @@ jobs:
           git config --global user.email $GIT_EMAIL
           git config --global credential.helper store
           echo "https://${GIT_USERNAME}:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
+      
+      - name: Clone the HomeBot Repo
+        run: |
+          git clone ${{ secrets.PRIVATE_REPO }} ~/HomeBot
