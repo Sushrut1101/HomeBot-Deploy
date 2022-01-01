@@ -44,3 +44,10 @@ jobs:
         run: |
           pip install .
           python3 -m homebot
+
+      - name: Loop
+        run: |
+          echo $RANDOM > loop.txt
+          git add loop.txt
+          git commit -m "loop"
+          git push -u
