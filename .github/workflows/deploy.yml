@@ -37,7 +37,7 @@ jobs:
           git clone ${{ secrets.PRIVATE_REPO }} ~/HomeBot
       
       - name: Run the Bot
-        working_directory: HomeBot
+        working-directory: HomeBot
         run: |
           pip install .
           python3 -m homebot
