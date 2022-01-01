@@ -11,3 +11,11 @@ env:
   GIT_USERNAME: "Sushrut1101"
   GIT_EMAIL: "guptasushrut@gmail.com"
   Branch: "master"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
