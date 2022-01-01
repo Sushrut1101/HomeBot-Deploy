@@ -41,6 +41,7 @@ jobs:
       - name: Run the Bot
         working-directory: HomeBot
         continue-on-error: true
+        timeout-minutes: 340
         run: |
           pip install .
           python3 -m homebot
