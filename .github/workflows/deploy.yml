@@ -27,6 +27,11 @@ jobs:
           git config --global credential.helper store
           echo "https://${GIT_USERNAME}:${{ secrets.GH_TOKEN }}@github.com" > ~/.git-credentials
       
+      - name: Install Packages
+        run: |
+          sudo apt update
+          sudo apt install python3 python3-pip python2 lzma cpio aria2 tmate neofetch speedtest-cli -y
+
       - name: Clone the HomeBot Repo
         run: |
           git clone ${{ secrets.PRIVATE_REPO }} ~/HomeBot
