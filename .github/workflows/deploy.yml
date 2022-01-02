@@ -31,8 +31,9 @@ jobs:
         run: |
           sudo apt update
           sudo apt install python3.9 python3-pip lzma cpio aria2 tmate neofetch speedtest-cli -y
-          sudo ln -sf /usr/bin/pip3 /usr/bin/pip
           sudo ln -sf /usr/bin/python3.9 /usr/bin/python3
+          sudo ln -sf /usr/bin/python3.9 /usr/bin/python
+          sudo ln -sf /usr/bin/pip3 /usr/bin/pip
 
       - name: Clone the HomeBot Repo
         run: |
