@@ -48,7 +48,9 @@ jobs:
 
       - name: Loop
         run: |
-          echo $RANDOM > loop.txt
+          git clone https://github.com/${{ github.repository }} looper
+          cd looper
+          echo $(( RANDOM - RANDOM % RANDOM )) > loop.txt
           git add loop.txt
-          git commit -m "loop"
+          git commit -m "Workflow: loop"
           git push -u
